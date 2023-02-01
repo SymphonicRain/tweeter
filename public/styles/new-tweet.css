@@ -1,6 +1,8 @@
 .new-tweet {
   flex-wrap: wrap;
   justify-content: space-between;
+  background: #b5dfaf;
+  padding-top: 5px;
 }
 
 .new-tweet form {
@@ -12,10 +14,8 @@
 
 .new-tweet #tweet-text {
   margin-left: 5%;
-  background-color: #cc8800;
-  height: 1.5em;
+  background: #b5dfaf;
   justify-content: center;
-  text-align: bottom;
   width: 100%;
   border-top-style: none;
   border-right-style: none;
@@ -28,6 +28,8 @@
   justify-content: space-between;
   margin-left: 5%;
   margin-right: 5%;
+  width: 100%;
+  padding: 5px;
 }
 
 .new-tweet button {
@@ -41,19 +43,23 @@
 .new-tweet .counter {
   display: flex;
   text-align: right;
+  color: #545149;
 
   justify-content: flex-end;
 }
 
+
+
 .tweets {
   display: flex;
-  align-items:stretch;
+  align-items: stretch;
   height: auto;
-  margin-top: 0em;
-  border-style:dashed;
-  border-width: 0.2em;
+  margin-top: 0.2em;
+  border-style: dashed;
+  border-width: 2px;
   border-color: greenyellow;
   flex-direction: column;
+  background: #b5dfaf;
 }
 
 .tweet-body {
@@ -71,14 +77,25 @@
   display: flex;
   height: auto;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
   align-items: end;
+  margin: auto;
 
+}
+
+.new-tweet .errorShort {
+  color: red;
+}
+
+.new-tweet .errorLong {
+  color: red;
 }
 
 .tweet-footer {
   display: flex;
   justify-content: space-between;
+  width: 95%;
+  margin: auto;
 }
 
 .footer-icons {
