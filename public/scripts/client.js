@@ -4,3 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(function() {
+  // --- our code goes here ---
+  console.log("IMREADY");
+
+});
+
+/*
+for each json.parseuser
+body.append `${user.name}`
+
+*/

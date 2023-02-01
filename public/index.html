@@ -7,23 +7,94 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet"> 
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <span class="right">
+        <table>
+          <tr>
+            <td><div>Write a new Tweet</div></td>
+          </tr>
+          <tr>
+            <td><div><i class="fa-solid fa-angles-down"></i></div></td>
+          </tr>
+        </table>
+      </span>
     </nav>
 
+    <header class="banner">
+      <table class="profile">
+        <tr>
+          <td>
+            <div>
+              <img src="/images/profile-hex.png">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><h2>Your Name</h2></td>
+        </tr>
+      </table>
+    </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <form action="/tweets/" method="POST">
+          <p><textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea></p>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section class="timeline">
+        <article class="tweets">
+          <header class="tweet-header"><div>username, <img src="https://s.yimg.com/cv/apiv2/default/mlb/20190319/500x500/yankees_wbgs.png" width = 50px, height="50px"></div><div>handle</div></header>
+          <p class="tweet-body">hot potato pass it on, pass it on, pass it on, hot potato pass it on, my dear lady.</p>
+
+          
+          <footer class="tweet-footer">time, <div class="footer-icons"><i class="fa-solid fa-flag hovericon1"></i> <i class="fa-solid fa-retweet hovericon1"></i><i class="fa-regular fa-heart hovericon1"></i></div></footer>
+
+        </article>
+        <article class="tweets">
+          <header class="tweet-header"><div>username, <img src="https://s.yimg.com/cv/apiv2/default/mlb/20190319/500x500/yankees_wbgs.png" width = 50px, height="50px"></div><div>handle</div></header>
+          <p class="tweet-body">text body2 alfalfa</p>
+
+          
+          <footer class="tweet-footer">time, <div class="footer-icons"><i class="fa-solid fa-flag hovericon1"></i> <i class="fa-solid fa-retweet hovericon1"></i><i class="fa-regular fa-heart hovericon1"></i></div></footer>
+
+        </article>
+
+
+      </section>
+    </main>
   </body>
 </html>
