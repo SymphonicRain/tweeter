@@ -1,8 +1,11 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone developed under the tutelage of Lighthouse Labs.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Final Product
+
+!["screenshot of page on screens with a width of 1024 pixels or above"](https://github.com/SymphonicRain/tinyapp/blob/master/docs/TinyAppMain.JPG)
+!["screenshot of page on screens with a width under 1024 pixels"](https://github.com/SymphonicRain/tinyapp/blob/master/docs/TinyAppEdit.JPG)
 
 ## Getting Started
 
@@ -12,7 +15,14 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Features
+- Clicking on "write a new tweet" or the arrow directly below the text in the banner will toggle the text submission field with real-time character-counter.
+- Scrolling down more than 200 pixels will display an arrow button that brings the user back to the top of the page and open the text submission field.
+- User-submitted messages will display directly below the text submission field.
+
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- Chance

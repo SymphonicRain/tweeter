@@ -1,38 +1,27 @@
 nav {
-  display:flex;
+  display: flex;
   position: fixed;
   height: 120px;
   width: 100%;
   background-color: cornflowerblue;
   color: #FFFFFF;
   justify-content: space-between;
- }
- 
-span {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+nav span {
   display: flex;
   margin: 1.5em;
   font-family: Bungee, sans-serif;
- }
-
- table.profile {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
 }
-
- span.right {
+nav .right {
   font-family: Source Sans Pro, sans-serif;
   align-items: flex-end;
   text-align: center;
   display: flex;
   justify-content: baseline;
- }
-
- .expand div:hover {
-  cursor: pointer;
-  color: #e40c0c;
 }
-
+nav .right .expand div:hover {
+  cursor: pointer;
+  color: red;
+}

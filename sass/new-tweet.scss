@@ -1,0 +1,49 @@
+$tweet-background:#b5dfaf;
+$highlight: red;
+$tie-at-home: cornflowerblue;  // A little HIMYM joke; would have called it $banner-background otherwise.
+
+.new-tweet {
+  background: $tweet-background;
+  padding-top: 5px;
+  margin-top: 20px;
+  form {
+    width: 90%;
+  }
+  #tweet-text {
+    margin-left: 5%;
+    background: $tweet-background;
+    width: 100%;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 4.5%;
+    margin-right: 5%;
+    width: 100%;
+    padding: 5px;
+  }
+  button {
+    display: flex;
+    background-color: $tie-at-home;
+    font-family: Bungee, sans-serif;
+    color: white;
+    justify-content: left;
+  }
+  .counter {
+    display: flex;
+    text-align: right;
+    color: #545149;
+    justify-content: flex-end;
+  }
+  .errorShort {
+    color: $highlight;
+  }
+  
+  .errorLong {
+    color: $highlight;
+  }
+}

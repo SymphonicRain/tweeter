@@ -18,14 +18,10 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -36,7 +32,6 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
       <span class="right">
@@ -52,24 +47,15 @@
     </nav>
 
     <header class="banner">
-      <table class="profile">
-        <tr>
-          <td>
-            <div>
-              <img src="/images/profile-hex.png">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td><h2>Your Name</h2></td>
-        </tr>
-      </table>
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <div>Your Name</div>
     </header>
 
-    <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <p class="errorShort">Your message empty! Please make it longer!<br></p>
+        <p class="errorShort">Your message is empty! Please make it longer!<br></p>
         <p class ="errorLong">Your message is too long! Please make it shorter!<br></p>
         <form action="/tweets/" method="POST">
           <p><textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea></p>
@@ -81,12 +67,8 @@
       </section>
       <section class="timeline">
     
-
-
       </section>
       <section class="end"> 
-
-
         <button class="scroll"><i class="fa-solid fa-angles-up"></i></button>
       </section>
     </main>

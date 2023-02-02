@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  // --- our code goes here ---
-  console.log("IMREADY");
 
   $("#tweet-text").on("keyup", function() {
     let currentNode = $("#tweet-text").parent();
@@ -12,11 +10,11 @@ $(document).ready(function() {
       if (currentNode.parent().find("output").val() < 0) {
         currentNode.parent().find("output").css({"color": "red"});
       } else (
-        currentNode.parent().find("output").css({"color": "#545149"})     
-      )
+        currentNode.parent().find("output").css({"color": "#545149"})
+      );
  
     }, 0);
-  })
+  });
 });
 
 
