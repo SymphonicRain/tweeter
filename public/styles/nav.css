@@ -1,12 +1,11 @@
 nav {
   display:flex;
-  /* position: fixed; */
+  position: fixed;
   height: 120px;
   width: 100%;
   background-color: #4056a1;
   color: #FFFFFF;
   justify-content: space-between;
-
  }
  
 span {
@@ -15,6 +14,15 @@ span {
   font-family: Bungee, sans-serif;
  }
 
+ table.profile {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
  span.right {
   font-family: Source Sans Pro, sans-serif;
   align-items: flex-end;
@@ -22,3 +30,8 @@ span {
   display: flex;
   justify-content: baseline;
  }
+
+ .expand div:hover {
+  color: #e40c0c;
+}
+

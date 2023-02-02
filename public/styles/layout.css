@@ -32,7 +32,6 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  main {
-  /* display: flex; */
   flex-wrap: wrap;
   width: 90%;
   justify-content: center;
@@ -43,3 +42,30 @@ body {
   border-width: 0cm;
  }
 
+
+ .end {
+  width: 103%;
+  display:flex;
+  justify-content: flex-end;
+ }
+
+ .scroll {
+  display: flex;
+  border: none;
+  padding: 30px;
+  font-size: 2em;
+  height: 1em;
+  width: 1em;
+  box-shadow: 0 2px 4px darkslategrey;
+  cursor: pointer;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll:hover{
+  color:red
+}
