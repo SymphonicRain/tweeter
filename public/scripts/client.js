@@ -7,12 +7,13 @@
 
 
 $(document).ready(function() {
-  // --- our code goes here ---
   console.log("IMREADY");
+  console.log($(window));
+  
   $(".errorLong").slideUp(0);
   $(".errorShort").slideUp(0);
   $("section.new-tweet").slideUp(0);
-  $(".scroll").hide()
+  $(".scroll").hide();
 
   $(".expand").on("click", () =>{
     const $section = $("section.new-tweet")
@@ -34,14 +35,10 @@ $(document).ready(function() {
 
   });
 
-  $(".scroll").on("click", () =>{
+  $(".scroll").on("click", () => {
     const $section = $("section.new-tweet")
-    // if ($section.is(":visible")) {
-    //   $section.slideUp();
-    // } else {
-      $section.slideDown(200);
-      $section.find("textarea").focus();
-    // }
+    $section.slideDown(200);
+    $section.find("textarea").focus();
   })
 
 
@@ -102,25 +99,8 @@ const loadTweets = () => {
     .then(function (tweets) {
       console.log('Success: ', tweets);
       renderTweets(tweets);
-
-
     });
 };
 
 loadTweets();
 
-
-
-/*
-for each json.parseuser
-body.append `${user.name}`
-
-*/
-
-
-
-// const $tweet = createTweetElement(tweetData);
-
-// // Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
-// $('#timeline').append($tweet); 

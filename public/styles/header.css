@@ -1,6 +1,7 @@
 .banner {
   display: flex;
-  margin-top: 120px;
+  background-color: cornflowerblue;
+  margin-top: 240px;
   margin-left: auto;
   margin-right: auto;
   height: 400px;
@@ -8,6 +9,15 @@
   align-items: center;
   text-align: center;
   table-layout: auto;
+}
+
+@media screen and (max-width: 1023px) {
+  .banner {
+    margin-top: 120px;
+    color: white;
+    width: 100%;
+  }
+  
 }
 
 

@@ -14,7 +14,7 @@ html {
  * Global layout stuff
  */
 
-body {
+/* body {
   display: flex;
   flex-wrap: wrap;
   color: #545149;
@@ -23,15 +23,15 @@ body {
   font-family:  Source Sans Pro, sans-serif;
   background-color: #cc8800;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-}
+} */
+
 
 
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- main {
+ /* main {
   flex-wrap: wrap;
   width: 90%;
   justify-content: center;
@@ -68,4 +68,111 @@ body {
 
 .scroll:hover{
   color:red
+} */
+
+@media screen and (max-width: 1023px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    color: #545149;
+    font-size: 24px;
+    font-family:  Source Sans Pro, sans-serif;
+    background-color: #cc8800;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+  
+  
+  
+  /*
+   * Additional CSS can be defined below or in other CSS files, as per instructions
+   */
+   main {
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 0cm;
+   }
+  
+  
+   .end {
+    width: 103%;
+    display:flex;
+    justify-content: flex-end;
+   }
+  
+   .scroll {
+    display: flex;
+    border: none;
+    padding: 30px;
+    font-size: 2em;
+    height: 1em;
+    width: 1em;
+    box-shadow: 0 2px 4px darkslategrey;
+    cursor: pointer;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .scroll:hover{
+    color:red
+  }
+  
+}
+
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #545149;
+    font-size: 24px;
+    font-family:  Source Sans Pro, sans-serif;
+    background-color: #cc8800;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  }
+
+  main {
+    display: flex;
+    margin-top: 120px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 0cm;
+   }
+
+   .scroll {
+    display: flex;
+    border: none;
+    padding: 30px;
+    font-size: 2em;
+    height: 1em;
+    width: 1em;
+    box-shadow: 0 2px 4px darkslategrey;
+    cursor: pointer;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .scroll:hover{
+    color:red
+  }
+
+  
 }
