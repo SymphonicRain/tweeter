@@ -4,8 +4,8 @@ Tweeter is a simple, single-page Twitter clone developed under the tutelage of L
 
 ## Final Product
 
-!["screenshot of page on screens with a width of 1024 pixels or above"](https://github.com/SymphonicRain/tinyapp/blob/master/docs/TinyAppMain.JPG)
-!["screenshot of page on screens with a width under 1024 pixels"](https://github.com/SymphonicRain/tinyapp/blob/master/docs/TinyAppEdit.JPG)
+!["screenshot of page on screens with a width of 1024 pixels or above"](https://github.com/SymphonicRain/tweeter/blob/master/docs/tweeterLargeScreen.JPG)
+!["screenshot of page on screens with a width under 1024 pixels"](https://github.com/SymphonicRain/tweeter/blob/master/docs/tweeterSmallerScreen.JPG)
 
 ## Getting Started
 
@@ -19,6 +19,7 @@ Tweeter is a simple, single-page Twitter clone developed under the tutelage of L
 - Clicking on "write a new tweet" or the arrow directly below the text in the banner will toggle the text submission field with real-time character-counter.
 - Scrolling down more than 200 pixels will display an arrow button that brings the user back to the top of the page and open the text submission field.
 - User-submitted messages will display directly below the text submission field.
+- If user attempts to refresh or leave the page while the text submission field has unsent messages, the browser will show a warning dialogue.
 
 ## Dependencies
 

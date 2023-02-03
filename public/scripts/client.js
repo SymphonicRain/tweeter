@@ -50,6 +50,13 @@ $(document).ready(function() {
       $("#tweet-text").val("");
     }
   });
+
+  $(window).bind('beforeunload', function(){
+    if ($("#tweet-text").val().length > 0) {
+      return 'Are you sure you want to leave? Your unsubmitted tweet will not be saved!';
+    }
+  });
+
 });
 
 const safeProof = function(str) {
@@ -62,8 +69,8 @@ const safeProof = function(str) {
 const createTweetElement = (tweet) => {
   return `<article class="tweets">
   <header class="tweet-header">
-    <div>
-      <img src="${tweet.user.avatars}" width = 50px>${tweet.user.name}
+    <div class="profilepic">
+      <img src="${tweet.user.avatars}", width = 50px, >${tweet.user.name}
     </div>
     <div>${tweet.user.handle}</div>
   </header>
@@ -77,6 +84,7 @@ const createTweetElement = (tweet) => {
       </div>
   </footer>
 </article>
+
 `;
 };
 
