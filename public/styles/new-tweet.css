@@ -33,12 +33,15 @@
 .new-tweet .counter {
   display: flex;
   text-align: right;
-  color: #545149;
   justify-content: flex-end;
 }
 .new-tweet .errorShort {
   color: red;
 }
 .new-tweet .errorLong {
+  color: red;
+}
+
+.redText {
   color: red;
 }

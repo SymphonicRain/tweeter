@@ -31,24 +31,13 @@ $(document).ready(function() {
   });
 
   $("form").submit(function(event) {
+    let $form = $(this);
+    let $textarea = $form.find("textarea");
+    // storing references under variables for readability and potential future restructure
     event.preventDefault();
-    const tweetLength = $("#tweet-text").val().length;
-    if (tweetLength < 1) {
-      $(".errorShort").slideDown();
-      return;
-    }
-    if (tweetLength > 140) {
-      $(".errorLong").slideDown();
-      return;
-    }
-
-    if (140 >= tweetLength &&  tweetLength > 0) {
-      $(".errorLong").slideUp(0);
-      $(".errorShort").slideUp(0);
-      $.post("/tweets/", $("#tweet-text").serialize());
-      setTimeout(()=> loadTweets(), 200);
-      $("#tweet-text").val("");
-    }
+    const tweetLength = $textarea.val().length;
+    verifyTweetLength(tweetLength);
+ 
   });
 
   $(window).bind('beforeunload', function(){
@@ -63,6 +52,8 @@ const safeProof = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
+
+  // this code is present so that if the user submits a tweet containing malicious code it will not be rendered when the tweet is added to the website.
 };
 
 
@@ -104,6 +95,28 @@ const loadTweets = () => {
       renderTweets(tweets);
     });
 };
+
+const verifyTweetLength = (num) => {
+  let $form = $("form");
+  let $textarea = $form.find("textarea");
+  if (num < 1) {
+    $(".errorLong").slideUp(0);
+    $(".errorShort").slideDown(200);
+  } else if (num > 140) {
+    $(".errorShort").slideUp(0);
+    $(".errorLong").slideDown(200);
+    return "over";
+  } else {
+    $(".errorLong").slideUp(0);
+    $(".errorShort").slideUp(0);
+    $.post("/tweets/", $textarea.serialize())
+      .done(function() {
+      loadTweets();
+      $textarea.val("");
+      $form.find("output").val("140");
+    });
+  }
+  }
 
 loadTweets();
 
