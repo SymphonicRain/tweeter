@@ -16,12 +16,12 @@ nav span {
 }
 nav .right {
   font-family: Source Sans Pro, sans-serif;
-  align-items: flex-end;
   text-align: center;
   display: flex;
-  justify-content: baseline;
+  flex-direction: column;
+  justify-content: center;
 }
-nav .right .expand div:hover {
+nav .right div:hover {
   cursor: pointer;
   color: red;
 }

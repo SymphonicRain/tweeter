@@ -20,11 +20,11 @@ nav {
    .right {
      // not a nested item inside the span above as there are two spans
      font-family: Source Sans Pro, sans-serif;
-     align-items: flex-end;
      text-align: center;
      display: flex;
-     justify-content: baseline;
-     .expand div:hover {
+     flex-direction: column;
+     justify-content: center;
+     div:hover {
        cursor: pointer;
        color: $highlight;
       }

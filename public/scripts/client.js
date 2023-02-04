@@ -5,7 +5,7 @@ $(document).ready(function() {
   $("section.new-tweet").slideUp(0);
   $(".scroll").hide();
 
-  $(".expand").on("click", () =>{
+  $(".right").on("click", () =>{
     const $section = $("section.new-tweet");
     if ($section.is(":visible")) {
       $section.slideUp();
@@ -93,7 +93,8 @@ const loadTweets = () => {
     .then(function(tweets) {
       console.log('Success: ', tweets);
       renderTweets(tweets);
-    });
+    })
+    .fail(()=> alert("Something went wrong! Please refresh your page and try again!"));
 };
 
 const verifyTweetLength = (num) => {
@@ -102,21 +103,23 @@ const verifyTweetLength = (num) => {
   if (num < 1) {
     $(".errorLong").slideUp(0);
     $(".errorShort").slideDown(200);
+    return;
   } else if (num > 140) {
     $(".errorShort").slideUp(0);
     $(".errorLong").slideDown(200);
-    return "over";
+    return;
   } else {
     $(".errorLong").slideUp(0);
     $(".errorShort").slideUp(0);
     $.post("/tweets/", $textarea.serialize())
       .done(function() {
-      loadTweets();
-      $textarea.val("");
-      $form.find("output").val("140");
-    });
+        loadTweets();
+        $textarea.val("");
+        $form.find("output").val("140");
+      })
+      .fail(() => alert("Something went wrong! Please refresh your page and try again."));
   }
-  }
+}
 
 loadTweets();
 
