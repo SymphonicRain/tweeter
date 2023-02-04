@@ -13,8 +13,6 @@ $(document).ready(function() {
         currentNode.parent().find("output").removeClass("redText");
       }
     }, 0);
+    // adding and removing classes makes css cleaner.
   });
 });
-
-
-
